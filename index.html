@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Demo styles -->
+  </head>
+
+  <body class="flex-col">
+    <!-- Swiper -->
+    <div class="w-full bg-white h-[150px] flex items-center">
+      <h2 class="text-5xl ml-14 font-semibold">
+        Projects and <br />
+        proctice
+      </h2>
+    </div>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide flex justify-center items-center py-5">
+          <div class="">
+            <h2 class="text-2xl text-gray-500 font-semibold mb-4">01</h2>
+
+            <p class="text-lg text-gray-500 mb-5">
+              Lorem ipsum dolor sit amet, <br />
+              consectetur adipiscing elit. Faucibus <br />
+              in libero risus semper habitant arcu <br />
+              eget. Et integer facilisi eget.
+            </p>
+
+            <img class="" src="./img/Frame 14165.png" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide flex justify-center items-center py-5">
+          <div class="">
+            <h2 class="text-2xl text-gray-500 font-semibold mb-4">02</h2>
+
+            <p class="text-lg text-gray-500 mb-5">
+              Lorem ipsum dolor sit amet, <br />
+              consectetur adipiscing elit. Faucibus <br />
+              in libero risus semper habitant arcu <br />
+              eget. Et integer facilisi eget.
+            </p>
+
+            <img class="" src="./img/Frame 14165 (1).png" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide flex justify-center items-center py-5">
+          <div class="">
+            <h2 class="text-2xl text-gray-500 font-semibold mb-4">03</h2>
+
+            <p class="text-lg text-gray-500 mb-5">
+              Lorem ipsum dolor sit amet, <br />
+              consectetur adipiscing elit. Faucibus <br />
+              in libero risus semper habitant arcu <br />
+              eget. Et integer facilisi eget.
+            </p>
+
+            <img class="" src="./img/Frame 14165 (2).png" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide flex items-center justify-center py-5">
+          <div class="">
+            <h2 class="text-2xl text-gray-500 font-semibold mb-4">04</h2>
+
+            <p class="text-lg text-gray-500 mb-5">
+              Lorem ipsum dolor sit amet, <br />
+              consectetur adipiscing elit. Faucibus <br />
+              in libero risus semper habitant arcu <br />
+              eget. Et integer facilisi eget.
+            </p>
+
+            <img class="" src="./img/Frame 14165.png" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide flex items-center justify-center py-5">
+          <div class="">
+            <h2 class="text-2xl text-gray-500 font-semibold mb-4">05</h2>
+
+            <p class="text-lg text-gray-500 mb-5">
+              Lorem ipsum dolor sit amet, <br />
+              consectetur adipiscing elit. Faucibus <br />
+              in libero risus semper habitant arcu <br />
+              eget. Et integer facilisi eget.
+            </p>
+
+            <img class="" src="./img/Frame 14165 (1).png" alt="" />
+          </div>
+        </div>
+        <div class="swiper-slide flex items-center justify-center py-5">
+          <div class="">
+            <h2 class="text-2xl text-gray-500 font-semibold mb-4">06</h2>
+
+            <p class="text-lg text-gray-500 mb-5">
+              Lorem ipsum dolor sit amet, <br />
+              consectetur adipiscing elit. Faucibus <br />
+              in libero risus semper habitant arcu <br />
+              eget. Et integer facilisi eget.
+            </p>
+
+            <img class="" src="./img/Frame 14165 (2).png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper", {
+        slidesPerView: 3,
+        direction: getDirection(),
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        on: {
+          resize: function () {
+            swiper.changeDirection(getDirection());
+          },
+        },
+      });
+
+      function getDirection() {
+        var windowWidth = window.innerWidth;
+        var direction = window.innerWidth <= 760 ? "vertical" : "horizontal";
+
+        return direction;
+      }
+    </script>
+  </body>
+</html>
